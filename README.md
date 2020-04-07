@@ -16,13 +16,13 @@ Here I am providing a list of packages (see `packages.txt`).
 
 ## 4. customize Atom
 
-### (1) add shortcut (shift-cmd-k) to compile the template file (`template.pmd`) into pdf. 
+### (1) add shortcut (__shift-cmd-k__) to compile the template file (`template.pmd`) into pdf. 
 
 I am using the fish shell, and you need first create a fish function (`autoweave.fish`) and put the file in your path. You can also translate it into a bash script, if you are using other shells. You can test this script by running the following command in the shell, and compile it into a pdf:
 
 > autoweave template.pmd
 
-If everything works fine, you can proceed to add a shell command in the Atom. You probably need to have pandoc, Rstudio and MkTex installed. With this script, you can create a shell command in Atom's `config.cson` file by appending the following piece of code (see the sample `config.cson` in the folder `atom-conf`). There might be some keybinding conflicts in Atom, and you can resolve them by using the `keybinding-resolver` package (cmd + . to check the comflicted keybindings, and change them). 
+If everything works fine, you can proceed to add a shell command in the Atom. You probably need to have pandoc, Rstudio and MkTex installed. With this script, you can create a shell command in Atom's `config.cson` file by appending the following piece of code (see the sample `config.cson` in the folder `atom-conf`). There might be some keybinding conflicts in Atom, and you can resolve them by using the `keybinding-resolver` package (__cmd + .__ to check the comflicted keybindings, and change them). 
 
 ```{r remedy001}
   "atom-shell-commands":
