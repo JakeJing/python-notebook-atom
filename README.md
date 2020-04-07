@@ -1,4 +1,4 @@
-# Set Up Atom for Python
+# Python Notebook in Atom
 
 I briefly include the procedures to set up the Atom as an IDE for python. I will make Atom similar to Rstudio with roughly the same shortcuts and functions. This is designed for .pmd format, though .py is also supported.
 
