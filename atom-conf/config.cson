@@ -1,0 +1,48 @@
+"*":
+  "atom-shell-commands":
+    commands: [
+      {
+        arguments: [
+          "-c autoweave {FileName}"
+        ]
+        command: "fish"
+        name: "pmd2pdf"
+        options:
+          cwd: "{FileDir}"
+          keymap: "shift-cmd-k"
+      }
+    ]
+  "bracket-matcher": {}
+  core:
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "atom-material-syntax"
+    ]
+    useTreeSitterParsers: false
+  editor:
+    fontFamily: "Courier"
+    fontSize: 24
+  "exception-reporting":
+    userId: "201c019b-29f2-48bd-a34d-08eb28f340af"
+  kite:
+    showWelcomeNotificationOnStartup: false
+  "linter-ui-default":
+    panelHeight: 271
+    showPanel: true
+  minimap:
+    absoluteMode: true
+    adjustAbsoluteModeHeight: true
+    displayMinimapOnLeft: true
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        blue: "#00c8ba"
+        cyan: "#7bce67"
+      zBright:
+        brightBlue: "#7bc2fa"
+    iconColors:
+      blue: "#6ab5fb"
+  welcome:
+    showOnStartup: false
