@@ -52,5 +52,37 @@ atom.commands.add 'atom-text-editor',
 	```""")
 ```
 
-To set up the 
+To add the shortcut, you can put the following code in the `keymap.cson` (check the example keymap.cson).
+
+```{r remedy001}
+'atom-text-editor':
+  'shift-cmd-i': 'custom:insert-pycell'
+```
+
+### (3) color the python code chunk
+
+It can make your life easier with a different color for the python code chunk. You can add the following code in the `style.less` (see the example `style.less`).
+
+```{r remedy001}
+atom-text-editor.editor {
+  .line {
+    position: relative;
+  .syntax--embedded {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        content: '';
+        display: block;
+        z-index: -1;
+      }
+      &.syntax--python::before{
+        background-color: fade(#282828, 35%);
+      }
+    }
+  }
+}
+```
 

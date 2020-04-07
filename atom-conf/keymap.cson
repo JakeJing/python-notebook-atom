@@ -1,0 +1,15 @@
+# Here's an example taken from Atom's built-in keymap:
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+
+'atom-text-editor':
+  'shift-cmd-i': 'custom:insert-pycell'
+# 'atom-text-editor:not([mini])':
+#   'alt-)': 'custom:jump-over-symbol'
+'.editor:not([mini])':
+  'ctrl-n': 'find-selection:find-next'
+  'ctrl-b': 'find-selection:find-previous'
