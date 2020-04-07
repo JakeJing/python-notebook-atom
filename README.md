@@ -98,4 +98,13 @@ I only have a temporary solution by making use of the `find-selection` packages,
 
 I also created a shortcut to clear the chunk output. But it seems that it will clean the output from all chunks. It would be better if there is a way to clean the output for each chunk, or can fold the code chunk results justs like the Rstudio. 
 
+### (7) override keybindings
+
+You may need to override some keybindings, you can copy certain keybindings in your keymap.cson file, and change according to the example below. __Note:__ you should use '.editor:not([mini])' to define a keybinding, and the keymap.cson file looks like this:
+
+```{r remedy001}
+'.editor:not([mini])':
+  'ctrl-n': 'find-selection:find-next'
+  'ctrl-b': 'find-selection:find-previous'
+```
 
