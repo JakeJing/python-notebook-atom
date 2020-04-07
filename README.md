@@ -90,8 +90,12 @@ atom-text-editor.editor {
 
 Pls check the file (`hydrogen.cson`), and you can customize your own shortcuts. You may need to resolve some conflicted keymappings, if it is needed.
 
-### (5) add shortcuts (chunk next: ctr-n; chunk before: ctrl-b) to jump over each code chunks
+### (5) add shortcuts (chunk next: ctrl-n; chunk before: ctrl-b) to jump over each code chunks
 
 I only have a temporary solution by making use of the `find-selection` packages, and you need to adjust the keybingdings accordingly. In order to just between each code chunk, you need to first select the check for python, and type (__ctr-n__) for next chunk, and (__ctrl-b__) for the chunk before. This is not the final solution, but a compromise way of solving the problem. One advantage of this is that you can jump over all the selected terms.
+
+### (6) shortcut (__ctrl-l__) to clear the chunk results
+
+I also created a shortcut to clear the chunk output. But it seems that it will clean the output from all chunks. It would be better if there is a way to clean the output for each chunk, or can fold the code chunk results justs like the Rstudio. 
 
 
