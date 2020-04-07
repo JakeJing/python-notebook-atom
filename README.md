@@ -16,9 +16,26 @@ Here I am providing a list of packages (see `packages.txt`).
 
 ## 4. customize Atom
 
-### add shortcut (shift-cmd-k) to compile the template file (`template.pmd`) into pdf. 
+### (1) add shortcut (shift-cmd-k) to compile the template file (`template.pmd`) into pdf. 
 
 I am using the fish shell, and you need first create a fish function (`autoweave.fish`) and put the file in your path. You can also translate it into a bash script, if you are using other shells. 
+
+```{r remedy001}
+  "atom-shell-commands":
+    commands: [
+      {
+        arguments: [
+          "-c autoweave {FileName}"
+        ]
+        command: "fish"
+        name: "pmd2pdf"
+        options:
+          cwd: "{FileDir}"
+          keymap: "shift-cmd-k"
+      }
+    ]
+```
+
 
 
 
