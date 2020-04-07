@@ -1,4 +1,4 @@
-# Setup Atom for Python
+# Set Up Atom for Python
 
 I briefly include the procedures to set up the Atom as an IDE for python. I will make Atom similar to Rstudio with roughly the same shortcuts and functions. This is designed for .pmd format, though .py is also supported.
 
@@ -22,7 +22,7 @@ I am using the fish shell, and you need first create a fish function (`autoweave
 
 > autoweave template.pmd
 
-If everything works fine, you can proceed to add a shell command in the Atom. You probably need to have pandoc, Rstudio and MkTex installed. With this script, you can create a shell command in Atom's `config.cson` file by appending the following piece of code (see the sample `config.cson` in the folder `atom-conf`). There might be some keybinding conflicts in Atom, and you can resolve them by using the `keybinding-resolver` package (__cmd + .__ to check the comflicted keybindings, and change them). 
+If everything works fine, you can proceed to add a shell command in the Atom. You probably need to have pandoc, Rstudio and MkTex installed. With this script, you can create a shell command in Atom's `config.cson` file by appending the following piece of code (see the sample `config.cson` in the folder `atom-conf`). There might be some keybinding conflicts in Atom, and you can resolve them by using the `keybinding-resolver` package (__cmd - .__ to check the comflicted keybindings, and change them). 
 
 ```{r remedy001}
 "atom-shell-commands":
@@ -61,7 +61,7 @@ To add the shortcut, you can put the following code in the `keymap.cson` (check 
 
 ### (3) color the python code chunk
 
-It can make your life easier with a different color for the python code chunk. You can add the following code in the `style.less` (see the example `style.less`).
+It can make your life easier with a different color for the python code chunk. You can add the following code in the `style.less` (see the example `style.less`). I specfically pick up the color based on my own Atom theme (UI theme: Atom dark; syntax theme: atom material).
 
 ```{r remedy001}
 atom-text-editor.editor {
@@ -85,4 +85,13 @@ atom-text-editor.editor {
   }
 }
 ```
+
+### (4) add shortcuts to run the code by line (__cmd-enter__) or run the whole chunk (__shift-cmd-enter__)
+
+Pls check the file (`hydrogen.cson`), and you can customize your own shortcuts. You may need to resolve some conflicted keymappings, if it is needed.
+
+### (5) add shortcuts (chunk next: ctr-n; chunk before: ctrl-b) to jump over each code chunks
+
+I only have a temporary solution by making use of the `find-selection` packages, and you need to adjust the keybingdings accordingly. In order to just between each code chunk, you need to first select the check for python, and type (__ctr-n__) for next chunk, and (__ctrl-b__) for the chunk before. This is not the final solution, but a compromise way of solving the problem. One advantage of this is that you can jump over all the selected terms.
+
 
