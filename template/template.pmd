@@ -1,0 +1,59 @@
+---
+title: "Template pmd file for python"
+author: "Yingqi Jing"
+date: "06.03.2020"
+header-includes:
+  - \usepackage{textcomp}
+  - \renewcommand{\thefigure}{S\arabic{figure}}
+  - \renewcommand{\thetable}{S\arabic{table}}
+  - \renewcommand{\thesection}{S\arabic{section}}
+  - \renewcommand{\thesubsection}{S\arabic{section}.\arabic{subsection}}
+  - \usepackage{tocloft}
+  - \settowidth{\cftsecnumwidth}{S10x}
+output:
+  pdf_document:
+   fig_crop: true
+   fig_caption: true
+   latex_engine: xelatex
+   toc: true
+   toc_depth: 4
+   number_section: true
+   pandoc_args: ["--variable=lof","--variable=lot","--bibliography=/Users/jakejing/switchdrive/bib/references.bib", "--csl=/Users/jakejing/switchdrive/bib/unified-style-linguistics.csl"]
+---
+
+\clearpage
+
+```{python, echo = False, include=False}
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+```
+
+Introduction
+===========
+
+This an example of a script that can be published using `Pweave`(http://mpastell.com/pweave). The script can be executed.
+
+```{python print}
+print("hello pweave + pmd")
+```
+
+Data and Methods
+============
+
+```{python results="asis", caption = "Plot for sin(x)"}
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2 * np.pi * t)
+fig, ax = plt.subplots()
+ax.plot(t, s)
+ax.set(xlabel='time (s)', ylabel='voltage (mV)',
+       title='About as simple as it gets, folks')
+ax.grid()
+plt.show()
+```
+
+Results
+=========
+
+Discussions
+==========
