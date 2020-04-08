@@ -24,9 +24,11 @@ output:
 \clearpage
 
 ```{python, echo = False, include=False}
-import matplotlib
-import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
 ```
 
 Introduction
@@ -34,23 +36,22 @@ Introduction
 
 This an example of a script that can be published using `Pweave`(http://mpastell.com/pweave). The script can be executed.
 
-```{python print}
-print("hello pweave + pmd")
-```
-
 Data and Methods
 ============
 
-```{python results="asis", caption = "Plot for sin(x)"}
-t = np.arange(0.0, 2.0, 0.01)
-s = 1 + np.sin(2 * np.pi * t)
-fig, ax = plt.subplots()
-ax.plot(t, s)
-ax.set(xlabel='time (s)', ylabel='voltage (mV)',
-       title='About as simple as it gets, folks')
-ax.grid()
+```{python, caption = "An example 3D plot"}
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+X = np.arange(-5, 5, 0.25)
+Y = np.arange(-5, 5, 0.25)
+X, Y = np.meshgrid(X, Y)
+Z = np.sin(np.sqrt(X**2 + Y**2))
+surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm,
+          linewidth=0, antialiased=False)
+fig.colorbar(surf, shrink=0.5, aspect=5)
 plt.show()
 ```
+
 
 Results
 =========
