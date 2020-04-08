@@ -107,4 +107,14 @@ You may need to override some keybindings, you can copy certain keybindings to y
   'ctrl-n': 'find-selection:find-next'
   'ctrl-b': 'find-selection:find-previous'
 ```
+### (8) turn on autosave
+
+You can also turn on the autosave mode (autosave package - settings - tick the enabled). 
+
+### (9) set the tab length
+
+You can set the tab length as 4 and show indent guide (settings - editor - tab length/show indent guide).
+
+
+
 
