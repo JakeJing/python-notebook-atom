@@ -1,20 +1,21 @@
-atom-text-editor.editor {
-  .line {
-    position: relative;
-  .syntax--embedded {
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 200%;
-        content: '';
-        display: block;
-        z-index: -1;
-      }
-      &.syntax--python::before{
-        background-color: fade(#282828, 35%);
-      }
-    }
-  }
-}
+Hydrogen
+atom-file-icons
+atom-html-preview
+atom-material-syntax
+atom-shell-commands
+autocomplete-python
+autocomplete
+busy-signal
+find-selection
+hydrogen-launcher
+hydrogen-python
+intentions
+kite
+language-weave
+linter-ui-default
+linter
+minimap
+platformio-ide-terminal
+python-autopep8
+python-debugger
+restart-atom
