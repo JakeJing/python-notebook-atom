@@ -8,7 +8,7 @@ I briefly include the procedures to set up the Atom as an IDE for python. I will
 
 ## 2. download install Atom from the offical web ([https://atom.io/](https://atom.io/))
 
-## 3. install the necessary packages for Atom, for example,  
+## 3. install the necessary packages for Atom, for example,
 
 > apm install Hydrogen
 
@@ -16,13 +16,13 @@ Here I am providing a list of packages (see `packages.txt`).
 
 ## 4. customize Atom
 
-### (1) add shortcut (__shift-cmd-k__) to compile the template file (`template.pmd`) into pdf. 
+### (1) add shortcut (__shift-cmd-k__) to compile the template file (`template.pmd`) into pdf.
 
 I am using the fish shell, and you need first create a fish function (`autoweave.fish`) and put the file in your path. You can also translate it into a bash script, if you are using other shells. You can test this script by running the following command in the shell, and compile it into a pdf:
 
 > autoweave template.pmd
 
-If everything works fine, you can proceed to add a shell command in the Atom. You probably need to have pandoc, Rstudio and MkTex installed. With this script, you can create a shell command in Atom's `config.cson` file by appending the following piece of code (see the sample `config.cson` in the folder `atom-conf`). There might be some keybinding conflicts in Atom, and you can resolve them by using the `keybinding-resolver` package (__cmd - .__ to check the comflicted keybindings, and change them). 
+If everything works fine, you can proceed to add a shell command in the Atom. You probably need to have pandoc, Rstudio and MkTex installed. With this script, you can create a shell command in Atom's `config.cson` file by appending the following piece of code (see the sample `config.cson` in the folder `atom-conf`). There might be some keybinding conflicts in Atom, and you can resolve them by using the `keybinding-resolver` package (__cmd - .__ to check the comflicted keybindings, and change them).
 
 ```{r remedy001}
 "atom-shell-commands":
@@ -94,12 +94,12 @@ Pls check the file (`hydrogen.cson`), and you can customize your own shortcuts. 
 
 I only have a temporary solution by making use of the `find-selection` packages, and you need to adjust the keybingdings accordingly. In order to just between each code chunk, you need to first select the check for python, and type (__ctr-n__) for next chunk, and (__ctrl-b__) for the chunk before. This is not the final solution, but a compromise way of solving the problem. One advantage of this is that you can jump over all the selected terms.
 
-Alternatively, you can edit the source code of `cell-navigation` package to navigate between different python code chunks. To do that, you need to replace the original cell marker (__# %%__) as __/^```{python/__ in the __cell-navigation/utils.coffee__ and __spec/00-utils-spec.coffee__ files. Here I also map the keyshorts as __ctrl-n/p__ to jump to the next or previous chunk.
+Alternatively, you can edit the source code of `cell-navigation` package to navigate between different python code chunks. To do that, you need to replace the original cell marker (__# %%__) as __/^```.?python|^# %%/__ in the __cell-navigation/utils.coffee__ and __spec/00-utils-spec.coffee__ files. Here I also map the keyshorts as __ctrl-n/p__ to jump to the next or previous chunk.
 
 
 ### (6) shortcut (__ctrl-l__) to clear the chunk results
 
-I also created a shortcut to clear the chunk output. But it seems that it will clean the output from all chunks. It would be better if there is a way to clean the output for each chunk, or can fold the code chunk results justs like the Rstudio. 
+I also created a shortcut to clear the chunk output. But it seems that it will clean the output from all chunks. It would be better if there is a way to clean the output for each chunk, or can fold the code chunk results justs like the Rstudio.
 
 ### (7) override keybindings
 
@@ -112,7 +112,7 @@ You may need to override some keybindings, you can copy certain keybindings to y
 ```
 ### (8) turn on autosave
 
-You can also turn on the autosave mode (autosave package - settings - tick the enabled). 
+You can also turn on the autosave mode (autosave package - settings - tick the enabled).
 
 ### (9) set the tab length
 
