@@ -61,7 +61,7 @@ To add the shortcut, you can put the following code in the `keymap.cson` (check 
 
 ### (3) color the python code chunk
 
-It can make your life easier with a different color for the python code chunk. You can add the following code in the `style.less` (see the example `style.less`). I specfically pick up the color based on my own Atom theme (UI theme: Atom dark; syntax theme: atom material).
+It can make your life easier with a different color for the python code chunk. You can add the following code in the `style.less` (see the example `style.less`). I specfically pick up the color based on my own Atom theme (UI theme: Atom dark; syntax theme: atom material or jvpr-dark-syntax).
 
 ```{r remedy001}
 atom-text-editor.editor {
@@ -94,7 +94,7 @@ Pls check the file (`hydrogen.cson`), and you can customize your own shortcuts. 
 
 I only have a temporary solution by making use of the `find-selection` packages, and you need to adjust the keybingdings accordingly. In order to just between each code chunk, you need to first select the check for python, and type (__ctr-n__) for next chunk, and (__ctrl-b__) for the chunk before. This is not the final solution, but a compromise way of solving the problem. One advantage of this is that you can jump over all the selected terms.
 
-Alternatively, you can edit the source code of `cell-navigation` package to navigate between different python code chunks. To do that, you need to replace the original cell marker (__# %%__) as __/^```.?python|^# %%/__ in the __cell-navigation/utils.coffee__ and __spec/00-utils-spec.coffee__ files. Here I also map the keyshorts as __ctrl-n/p__ to jump to the next or previous chunk.
+Alternatively, you can edit the source code of `cell-navigation` package to navigate between different python code chunks. To do that, you need to replace the original cell marker (__# %%__) as __/^```.?python|^# %%/__ in the __cell-navigation/utils.coffee__ and __spec/00-utils-spec.coffee__ files. Here I also map the keyshorts as __ctrl-n/b__ to jump to the next or previous chunk.
 
 
 ### (6) shortcut (__ctrl-l__) to clear the chunk results
