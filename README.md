@@ -118,6 +118,11 @@ You can also turn on the autosave mode (autosave package - settings - tick the e
 
 You can set the tab length as 4 and show indent guide (settings - editor - tab length/show indent guide).
 
+### (10) turn on soft wrap
 
+Just put the following piece in Atom's __config.cson__ file.
 
-
+```{r remedy001}
+editor:
+  softWrap: true
+```

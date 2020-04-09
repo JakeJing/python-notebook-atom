@@ -28,13 +28,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
-#
+# %%
 
-# Introduction
+# %% name = "newchunk"
+print("hello world")
+# %%
+
+Introduction
+============
 
 This an example of a script that can be published using `Pweave`(http://mpastell.com/pweave). The script can be executed.
 
-# Data and Methods
+Data and Methods
+=============
 
 # %% caption = "An example 3D plot", f_size = (6.5, 4.5)
 fig = plt.figure()
@@ -47,8 +53,10 @@ surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm,
           linewidth=0, antialiased=False)
 fig.colorbar(surf, shrink=0.5, aspect=5)
 plt.show()
-#
+# %%
 
-# Results
+Results
+============
 
-# Discussions
+Discussions
+============
