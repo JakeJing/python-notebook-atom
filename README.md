@@ -103,7 +103,7 @@ I also created a shortcut to clear the chunk output. But it seems that it will c
 
 ### (7) override keybindings
 
-You may need to override some keybindings, you can copy certain keybindings to your keymap.cson file, and change according to the example below. __Note:__ you should use '.editor:not([mini])' to define a keybinding, and the keymap.cson file looks like this:
+You may need to override some keybindings, you can copy certain keybindings to your keymap.cson file, and change according to the example below. __Note:__ you should use '.editor:not([mini])' to define a keybinding, and the __keymap.cson__ file looks like this:
 
 ```{r remedy001}
 '.editor:not([mini])':
