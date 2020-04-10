@@ -63,6 +63,7 @@ To add the shortcut, you can put the following code in the `keymap.cson` (check 
 
 It can make your life easier with a different color for the python code chunk. You can add the following code in the `style.less` (see the example `style.less`). I specfically pick up the color based on my own Atom theme (UI theme: Atom dark; syntax theme: atom material or jvpr-dark-syntax).
 
+
 ```{r remedy001}
 atom-text-editor.editor {
   .line {
@@ -84,6 +85,21 @@ atom-text-editor.editor {
     }
   }
 }
+```
+
+Note: I also slightly edit the theme color pattern below in the source code (__base.less__) of jvpr-dark-syntax.
+
+```{r remedy001}
+.syntax--invalid.syntax--illegal {
+  background-color: @syntax-background-color;
+  color: @jv-white;
+}
+```
+
+The selection color in the theme is also changed to be light-gray in the __syntax-variables.less__ file. 
+
+```{r remedy001}
+@syntax-selection-color: @jv-light-gray;
 ```
 
 ### (4) add shortcuts to run the code by line (__cmd-enter__) or run the whole chunk (__shift-cmd-enter__)
