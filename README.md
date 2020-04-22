@@ -142,3 +142,41 @@ Just put the following piece in Atom's __config.cson__ file.
 editor:
   softWrap: true
 ```
+
+### (11) contrast the colors for code errors
+
+The color contrast is not sufficient for Atom with a dark theme. It would be better to adjust the color for python syntactic errors.
+
+```{r remedy001}
+jupyter kernelspec list
+#  python3      /Users/jakejing/Library/Jupyter/kernels/python3
+```
+
+Go to this folder and set the color as 'NoColor' in `kernel.json` file. This will make all error messages in python as white. There are also some other options, such as 'Neutral', 'LightBG', and 'Linux'.
+
+```{r remedy001}
+{
+ "argv": [
+  "/usr/local/opt/python/bin/python3.7",
+  "-m",
+  "ipykernel_launcher",
+  "--colors='NoColor'",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python 3",
+ "language": "python"
+}
+```
+
+You can still change the background color for the hygrogen cell by appending the following code in the `style.less` file.
+
+```{r remedy001}
+atom-text-editor {
+  .hydrogen {
+    .hydrogen_cell_display{
+        background-color: #4f4850;
+    }
+  }
+}
+```
