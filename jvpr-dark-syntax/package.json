@@ -1,0 +1,46 @@
+{
+  "_from": "https://www.atom.io/api/packages/jvpr-dark-syntax/versions/0.1.1/tarball",
+  "_id": "jvpr-dark-syntax@0.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-5r0cVtJBr6RF9YrxCuaAtP18FFPl4APZ48zMtvSR2ikG6nLDFQcL2lL7qaTBmNdTjNnGm4uXWab7GGvMFTodDQ==",
+  "_location": "/jvpr-dark-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/jvpr-dark-syntax/versions/0.1.1/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/jvpr-dark-syntax/versions/0.1.1/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/jvpr-dark-syntax/versions/0.1.1/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/jvpr-dark-syntax/versions/0.1.1/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/jvpr-dark-syntax/versions/0.1.1/tarball",
+  "_shasum": "bb77320a13dfdd308fc3094491a37de08faf38dd",
+  "_spec": "https://www.atom.io/api/packages/jvpr-dark-syntax/versions/0.1.1/tarball",
+  "_where": "/private/var/folders/s9/ttwvwj0d7m55xgssdd1sx4l00000gr/T/apm-install-dir-12039-54191-vt0b09.rg5wf",
+  "bugs": {
+    "url": "https://github.com/jvpereirarocha/jvpr-dark-syntax/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A colorful syntax to work with Python and Javascript languages",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/jvpereirarocha/jvpr-dark-syntax#readme",
+  "keywords": [
+    "syntax",
+    "python",
+    "javascript"
+  ],
+  "license": "MIT",
+  "name": "jvpr-dark-syntax",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvpereirarocha/jvpr-dark-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.1.1"
+}
