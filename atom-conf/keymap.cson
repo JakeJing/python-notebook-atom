@@ -6,10 +6,28 @@
 #   'ctrl-shift-p': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 
+'body':
+  'alt-cmd-n': 'application:new-window'
+
 'atom-text-editor':
-  'shift-cmd-i': 'custom:insert-pycell'
+  'shift-cmd-m': 'custom:insert-pycell'
+  'shift-cmd-i': 'custom:insert-pychunk'
+  'ctrl-p': 'custom:insertprint'
+  'ctrl-i': 'editor:auto-indent'
+
+'atom-workspace':
+  'ctrl-n': 'cell-navigation:next-cell'
+  'ctrl-b': 'cell-navigation:previous-cell'
+
+'.platform-darwin atom-text-editor:not([mini])':
+  'shift-cmd-enter': 'hydrogen:run-cell-and-move-down'
+
 # 'atom-text-editor:not([mini])':
 #   'alt-)': 'custom:jump-over-symbol'
+
 '.editor:not([mini])':
-  'ctrl-n': 'find-selection:find-next'
-  'ctrl-b': 'find-selection:find-previous'
+  'alt-j': 'find-selection:find-next'
+  'alt-k': 'find-selection:find-previous'
+  'cmd-shift-l': 'editor:fold-selection'
+  'ctrl-w': 'editor:delete-to-beginning-of-word'
+  'ctrl-u': 'editor:delete-to-beginning-of-line'
