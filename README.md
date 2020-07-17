@@ -112,29 +112,48 @@ I only have a temporary solution by making use of the `find-selection` packages,
 
 Alternatively, you can edit the source code of `cell-navigation` package to navigate between different python code chunks. To do that, you need to replace the original cell marker (__# %%__) as __/^```.?python|^# %%/__ in the __cell-navigation/utils.coffee__ and __spec/00-utils-spec.coffee__ files. Here I also map the keyshorts as __ctrl-n/b__ to jump to the next or previous chunk.
 
+### (6) map multiple commands with a single keystroke
 
-### (6) shortcut (__ctrl-l__) to clear the chunk results
+To customize your own keybindings, you can also define a series of actions or commands, and map them to one single keystroke via *coffee* script. Here is an example of running the next code chunk (__1.__ move to the next chunk; __2.__ run the code chunk).
+
+You can put the following code block in your __init.coffee__.
+
+```coffeescript
+atom.commands.add 'atom-text-editor', 'custom:run-next-cell', ->
+  editor = atom.views.getView(atom.workspace.getActiveTextEditor())
+  atom.commands.dispatch(editor, 'cell-navigation:next-cell')
+  atom.commands.dispatch(editor, 'hydrogen:run-cell-and-move-down')
+```
+
+With the defined command __"custom:run-next-cell"__, you can specify a key in your __keycap.cson__, i.e., "__shift-cmd-n__".
+
+```cson
+'atom-text-editor':
+  'shift-cmd-n': 'custom:run-next-cell'
+```
+
+### (7) shortcut (__ctrl-l__) to clear the chunk results
 
 I also created a shortcut to clear the chunk output. But it seems that it will clean the output from all chunks. It would be better if there is a way to clean the output for each chunk, or can fold the code chunk results justs like the Rstudio.
 
-### (7) override keybindings
+### (8) override keybindings
 
-You may need to override some keybindings, you can copy certain keybindings to your __keymap.cson__ file, and change according to the example below. __Note:__ you should use '.editor:not([mini])' to define a keybinding, and the __keymap.cson__ file looks like this:
+You may need to override some keybindings, you can copy certain keybindings (click the copy icon in __Settings-Keybindings__), and paste it into your __keymap.cson__ file. __Note:__ you should use '.editor:not([mini])' to define a keybinding, and the __keymap.cson__ file looks like this:
 
-```{r remedy001}
+```cson
 '.editor:not([mini])':
   'ctrl-n': 'find-selection:find-next'
   'ctrl-b': 'find-selection:find-previous'
 ```
-### (8) turn on autosave
+### (9) turn on autosave
 
 You can also turn on the autosave mode (autosave package - settings - tick the enabled).
 
-### (9) set the tab length
+### (10) set the tab length
 
 You can set the tab length as 4 and show indent guide (settings - editor - tab length/show indent guide).
 
-### (10) turn on soft wrap
+### (11) turn on soft wrap
 
 Just put the following piece in Atom's __config.cson__ file.
 
@@ -143,7 +162,7 @@ editor:
   softWrap: true
 ```
 
-### (11) contrast the colors for code errors
+### (12) contrast the colors for code errors
 
 The color contrast is not sufficient for Atom with a dark theme. It would be better to adjust the color for python syntactic errors.
 
