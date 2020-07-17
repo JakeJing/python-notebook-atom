@@ -14,8 +14,10 @@ function autoweave --description 'automatic compile a .pmd file into pdf'
     open -a Preview "$rootname".pdf
 
   case '*.py'
-    sed 's/^# %% /```python,/' $filename | sed 's/^# %%$/```/' > "$rootname".pmd
-    pweave -f pandoc "$rootname".pmd
+    set DT (date +"%d.%m.%Y")
+    sed 's/^# %% /```python,/' $filename | sed 's/^# %%$/```/' | sed "s/^date.*/date: $DT/" > "$rootname".pmd
+
+	pweave -f pandoc "$rootname".pmd
 
 	# insert the header to the 3r row
 	#  echo -e '4r /Users/jakejing/.config/fish/functions/header.md\nw' | ed "$rootname".md

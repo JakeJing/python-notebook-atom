@@ -1,7 +1,7 @@
 ---
 title: "Template pmd file for python"
 author: "Yingqi Jing"
-date: "06.03.2020"
+date:
 header-includes:
   - \usepackage{textcomp}
   - \renewcommand{\thefigure}{S\arabic{figure}}

@@ -1,7 +1,7 @@
 ---
 title: "Template python script"
 author: "Yingqi Jing"
-date: "06.03.2020"
+date:
 header-includes:
   - \usepackage{textcomp}
   - \renewcommand{\thefigure}{S\arabic{figure}}
