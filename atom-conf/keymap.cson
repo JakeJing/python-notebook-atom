@@ -14,6 +14,7 @@
   'shift-cmd-i': 'custom:insert-pychunk'
   'ctrl-p': 'custom:insertprint'
   'ctrl-i': 'editor:auto-indent'
+  'shift-cmd-n': 'custom:run-next-cell'
 
 'atom-workspace':
   'ctrl-n': 'cell-navigation:next-cell'
