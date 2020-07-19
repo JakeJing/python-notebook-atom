@@ -114,7 +114,7 @@ Alternatively, you can edit the source code of `cell-navigation` package to navi
 
 ### (6) install hydrogen-cell-separator 
 
-It is easier to identify the code chunk by adding a line above, and __hydrogen-cell-separator__ package is a useful tool. It seems that only *python* code is now supported, and you can easily expand the same rule to *julia* script by modifying the source code in the package. You can append the following chunk inside the __hydrogen-cell-separator.less__ file.
+It is easier to identify the code chunk by adding a line above, and __hydrogen-cell-separator__ package is a useful tool. It seems that only *python* code is now supported, and you can easily expand the same rule to *julia* script by modifying the source code in the package. You can append the following chunk inside the __hydrogen-cell-separator.less__ file. **Note** that you may also need to check another package called __method-separator__ for more general purposes.
 
 ```less
 atom-text-editor.editor {
