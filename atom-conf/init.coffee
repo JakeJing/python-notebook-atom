@@ -15,8 +15,13 @@ atom.commands.add 'atom-text-editor','custom:insert-pycell': ->
 
 	```""")
 
+atom.commands.add 'atom-text-editor','custom:insert-juliachunk': ->
+    atom.workspace.getActiveTextEditor()?.insertText("""# %% label = "newchunk"
+
+	# %%""")
+
 atom.commands.add 'atom-text-editor','custom:insert-pychunk': ->
-    atom.workspace.getActiveTextEditor()?.insertText("""# %% name = "newchunk"
+    atom.workspace.getActiveTextEditor()?.insertText("""# %%
 
 	# %%""")
 

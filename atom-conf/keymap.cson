@@ -12,6 +12,7 @@
 'atom-text-editor':
   'shift-cmd-m': 'custom:insert-pycell'
   'shift-cmd-i': 'custom:insert-pychunk'
+  'shift-cmd-j':'custom:insert-juliachunk'
   'ctrl-p': 'custom:insertprint'
   'ctrl-i': 'editor:auto-indent'
   'shift-cmd-n': 'custom:run-next-cell'
@@ -19,9 +20,11 @@
 'atom-workspace':
   'ctrl-n': 'cell-navigation:next-cell'
   'ctrl-b': 'cell-navigation:previous-cell'
+  'ctrl-l': 'hydrogen:clear-results'
 
 '.platform-darwin atom-text-editor:not([mini])':
   'shift-cmd-enter': 'hydrogen:run-cell-and-move-down'
+
 
 # 'atom-text-editor:not([mini])':
 #   'alt-)': 'custom:jump-over-symbol'
