@@ -215,3 +215,13 @@ atom-text-editor {
   }
 }
 ```
+
+### (14) edit the hydrogen kernels
+
+It seems that the **hydrogen** package relies on the jupyter notebook to update the kernels, for example, you can check the current kernals in this directory:
+
+```bash
+cd /Users/jakejing/Library/Jupyter/kernels/
+```
+
+If serveral version of *python* or *julia* is available, you can remove the unnecessary ones so that you do not need to specify the kernal every time when you run the script. 
