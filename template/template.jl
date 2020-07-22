@@ -23,18 +23,20 @@ output:
 
 \clearpage
 
+
+# %% label = "setup"; echo=false
+# the chunk setting is separated by semicolons(;)
+using Pkg
+using LinearAlgebra
+# %%
+
 Introduction
 ==========
 
+Note: in a plot the chunk setting of `label` should be removed, and you can set the width and heights as `out_width=500px; out_height=400px`.
+
 Section 1
 -----------
-
-# %% label = "newchunk"
-using Pkg
-println("hello julia")
-a = 1+ 2
-println(a)
-# %%
 
 # %% label = "new"
 println("hello julia")
@@ -42,5 +44,3 @@ a = 1+ 2
 println(a)
 # %%
 
-Section 2
------------
