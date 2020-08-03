@@ -225,3 +225,45 @@ cd /Users/jakejing/Library/Jupyter/kernels/
 ```
 
 If serveral versions of *python* or *julia* are available, you can remove the unnecessary ones so that you do not need to specify the kernel every time when you run the script. 
+
+It is also useful, if you want to specify the system image for Julia by editing the `kernel.json` file.
+
+```json
+"--sysimage=/Users/jakejing/switchdrive/juliawd/sysimage-precompile/atom.dylib",
+"--project=@.",
+"/Users/jakejing/.julia/packages/IJulia/DrVMH/src/kernel.jl",
+"{connection_file}"
+```
+
+### (15) set the default editor for @edit
+
+It is also necessary to set the default editor for @edit, and this is particularly useful for checking the source code of a function in julia.
+
+```bash
+cd ~./julia
+mkdir config
+cd config
+touch startup.jl
+# add the following content inside teh startup.jl
+ENV["JULIA_EDITOR"] = "atom"
+```
+
+### (16) install the document-outline package
+
+It is also good to show the document outline, and you need to install the **document-outline** package. To make it work for `pmd` file, you need to edit the source script (/lib/document-outline.js) in the package by adding **'source.pweave.md': MarkdownModel** in the following code chunk.
+
+```javascript
+const MODEL_CLASS_FOR_SCOPES = {
+  'source.gfm': MarkdownModel,
+  'text.md': MarkdownModel,
+  'source.weave.md': MarkdownModel,
+  'source.pweave.md': MarkdownModel,
+  'text.tex.latex': LatexModel,
+  'text.tex.latex.beamer': LatexModel,
+  'text.tex.latex.knitr': LatexModel,
+  'text.knitr': LatexModel,
+  'text.restructuredtext': ReStructuredTextModel,
+  'source.asciidoc': AsciiDocModel
+};
+```
+

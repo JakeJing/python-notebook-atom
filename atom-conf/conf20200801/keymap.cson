@@ -1,0 +1,53 @@
+# Here's an example taken from Atom's built-in keymap:
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+
+'body':
+  'alt-cmd-n': 'application:new-window'
+  # 'ctrl-1': 'window:focus-pane-above'
+  'ctrl-1': 'custom:move-cursor-to-text'
+  'ctrl-2': 'pane:move-active-item-to-top-of-stack'
+  'ctrl-shift-tab': 'pane:show-previous-item'
+  'ctrl-tab': 'pane:show-next-item'
+
+
+
+
+'atom-text-editor':
+  'shift-cmd-m': 'custom:insert-pycell'
+  'shift-cmd-i': 'custom:insert-pychunk'
+  'shift-cmd-j':'custom:insert-juliachunk'
+  'ctrl-p': 'custom:insertprint'
+  'cmd-p': 'custom:insertpipe'
+  'ctrl-i': 'editor:auto-indent'
+  'shift-cmd-n': 'custom:run-next-cell'
+
+'atom-workspace':
+  'ctrl-n': 'cell-navigation:next-cell'
+  'ctrl-b': 'cell-navigation:previous-cell'
+  'ctrl-l': 'hydrogen:clear-results'
+
+
+'.platform-darwin atom-text-editor:not([mini])':
+  'shift-cmd-enter': 'hydrogen:run-cell-and-move-down'
+  'cmd-enter': 'hydrogen:run-and-move-down'
+  'f1': 'hydrogen:toggle-inspector'
+
+'.platform-darwin atom-workspace':
+  'ctrl-2': 'julia-client:open-REPL'
+  # 'ctrl-1': 'custom:move-cursor-to-text'
+
+
+# 'atom-text-editor:not([mini])':
+#   'alt-)': 'custom:jump-over-symbol'
+
+'.editor:not([mini])':
+  'alt-j': 'find-selection:find-next'
+  'alt-k': 'find-selection:find-previous'
+  'cmd-shift-l': 'editor:fold-selection'
+  'ctrl-w': 'editor:delete-to-beginning-of-word'
+  'ctrl-u': 'editor:delete-to-beginning-of-line'

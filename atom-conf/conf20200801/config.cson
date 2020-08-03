@@ -1,0 +1,122 @@
+"*":
+  Hydrogen:
+    outputAreaFontSize: 14
+    showInspectorResultsInAutocomplete: true
+    startDir: "dirOfFile"
+    wrapOutput: true
+  "atom-shell-commands":
+    commands: [
+      {
+        arguments: [
+          "-c autoweave {FileName}"
+        ]
+        command: "fish"
+        name: "pmd2pdf"
+        options:
+          cwd: "{FileDir}"
+          keymap: "shift-cmd-k"
+      }
+    ]
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+  "autocomplete-python-jedi":
+    pythonPaths: "/usr/local/bin/python3"
+  autosave:
+    enabled: true
+  "bracket-matcher": {}
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "default-language"
+      "minimap"
+      "linter"
+      "symbols-tree-view"
+      "atom-ide-ui"
+      "document-outline"
+      "latex-completions"
+      "indent-detective"
+      "ide-python"
+      "kite"
+      "markdown-cell-highlight"
+    ]
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: []
+    restorePreviousWindowsOnStart: "always"
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "jvpr-dark-syntax"
+    ]
+    useTreeSitterParsers: false
+  "custom-folds": {}
+  "default-language":
+    defaultLanguage: "python3"
+  "document-outline": {}
+  editor:
+    fontFamily: "Courier"
+    fontSize: 24
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "201c019b-29f2-48bd-a34d-08eb28f340af"
+  "julia-client":
+    consoleOptions: {}
+    currentVersion: "0.12.5"
+    firstBoot: false
+    juliaOptions:
+      startupArguments: [
+        "-J/Users/jakejing/switchdrive/juliawd/sysimage-precompile/atom.dylib"
+      ]
+    uiOptions:
+      enableMenu: true
+      layouts:
+        defaultPanes:
+          console: false
+          documentation: false
+          plotPane: false
+          workspace: false
+        documentation:
+          defaultLocation: "bottom"
+        plotPane:
+          defaultLocation: "bottom"
+        workspace:
+          defaultLocation: "bottom"
+  kite:
+    developerMode: true
+    showWelcomeNotificationOnStartup: false
+  "language-weave": {}
+  "linter-ui-default":
+    panelHeight: 214
+  "markdown-document":
+    enableAutoSave: true
+  "markdown-preview":
+    breakOnSingleNewline: true
+  minimap:
+    absoluteMode: true
+    adjustAbsoluteModeHeight: true
+    charHeight: 4
+    charWidth: 1.2
+    displayMinimapOnLeft: true
+    interline: 2
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        blue: "#00c8ba"
+        cyan: "#7bce67"
+      zBright:
+        brightBlue: "#7bc2fa"
+    core:
+      workingDirectory: "Active File"
+    iconColors:
+      blue: "#6ab5fb"
+  "tool-bar":
+    iconSize: "21px"
+    position: "Top"
+    visible: false
+  "uber-juno":
+    disable: true
+  welcome:
+    showOnStartup: false
+  whitespace: {}

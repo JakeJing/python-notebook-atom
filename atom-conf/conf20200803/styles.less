@@ -1,0 +1,85 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+    color: #f5f3ef;
+  // color: #c0bbb5;
+  // background-color: hsl(180, 24%, 12%);
+  background-color: #333333;
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  // border-color: red;
+}
+
+atom-text-editor.editor {
+  .line {
+    position: relative;
+  .syntax--embedded {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        content: '';
+        display: block;
+        z-index: -1;
+      }
+      &.syntax--python::before{
+        background-color: fade(#282828, 25%);
+      }
+      &.syntax--julia::before{
+        background-color: fade(#282828, 25%);
+      }
+    }
+  }
+}
+
+
+@import "./packages/Hydrogen/styles/hydrogen.less";
+
+atom-text-editor {
+  .hydrogen {
+    .multiline-container {
+    .hydrogen_cell_display {
+        // background-color: @background-color-highlight; // cell background color
+        background-color: #3b3b3a; // change the background color (not need to change)
+        }
+    .toolbar .icon:hover {
+          background-color: @background-color-selected;
+            }
+    }
+  }
+}
+
+// atom-text-editor::shadow {
+//     .markup.underline.link.https.hyperlink { color: #c678dd; }
+// }
+
+atom-text-editor {
+    .syntax--hyperlink {
+      color: #99bbff;
+    text-decoration: underline;}
+    .syntax--comment { color: #ffa31a;} // for comments
+}
