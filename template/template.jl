@@ -21,7 +21,6 @@ output:
    pandoc_args: ["--variable=lof","--variable=lot","--bibliography=/Users/jakejing/switchdrive/bib/references.bib", "--csl=/Users/jakejing/switchdrive/bib/unified-style-linguistics.csl"]
 ---
 
-\clearpage
 
 
 # %% label = "setup"; echo=false
