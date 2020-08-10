@@ -14,8 +14,6 @@
 \renewcommand{\thesubsection}{S\arabic{section}.\arabic{subsection}}
 \usepackage{tocloft}
 \settowidth{\cftsecnumwidth}{S10x}
-\usepackage{color}
-\definecolor{shadecolor}{RGB}{248,248,248}
 
 {{#:tex_deps}}
 {{{ :tex_deps }}}
@@ -45,6 +43,8 @@
 {{/:date}}
 
 {{ :highlight }}
+
+\definecolor{shadecolor}{RGB}{248,248,248}
 
 \begin{document}
 
