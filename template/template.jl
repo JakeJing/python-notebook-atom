@@ -32,7 +32,7 @@ using LinearAlgebra
 Introduction
 ==========
 
-Note: in a plot the chunk setting of `label` should be removed, and you can set the width and heights as `out_width=500px; out_height=400px`.
+Note: in a plot the chunk setting of `label` should be removed, and you can set the width and heights as `fig_width = 6; fig_height = 4`.
 
 Section 1
 -----------
