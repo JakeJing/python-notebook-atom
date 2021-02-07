@@ -9,6 +9,7 @@
  * http://lesscss.org
  */
 
+
 /*
  * Examples
  * (To see them, uncomment and save)
@@ -21,10 +22,8 @@
 
 // style the background and foreground colors on the atom-text-editor-element itself
 atom-text-editor {
-    color: #f5f3ef;
-  // color: #c0bbb5;
+  // color: white;
   // background-color: hsl(180, 24%, 12%);
-  background-color: #333333;
 }
 
 // style UI elements inside atom-text-editor
@@ -47,39 +46,8 @@ atom-text-editor.editor {
         z-index: -1;
       }
       &.syntax--python::before{
-        background-color: fade(#282828, 30%);
-      }
-      &.syntax--julia::before{
-        background-color: fade(#282828, 30%);
+        background-color: fade(#282828, 35%);
       }
     }
   }
-}
-
-
-@import "./packages/Hydrogen/styles/hydrogen.less";
-
-atom-text-editor {
-  .hydrogen {
-    .multiline-container {
-    .hydrogen_cell_display {
-        // background-color: @background-color-highlight; // cell background color
-        background-color: #3b3b3a; // change the background color (not need to change)
-        }
-    .toolbar .icon:hover {
-          background-color: @background-color-selected;
-            }
-    }
-  }
-}
-
-// atom-text-editor::shadow {
-//     .markup.underline.link.https.hyperlink { color: #c678dd; }
-// }
-
-atom-text-editor {
-    .syntax--hyperlink {
-      color: #99bbff;
-    text-decoration: underline;}
-    .syntax--comment { color: #ffa31a;} // for comments
 }
