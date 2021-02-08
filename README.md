@@ -284,3 +284,16 @@ With this pre-defined action, I simply map a key combination (**shift-cmd**) to 
 'atom-workspace':
   'shift-cmd': 'custom:move-up-down'
 ```
+
+### (18) adjust the gutter column width
+
+To adjust the gutter column width, we can set a min-width in the **style.less** file. 
+
+```less
+atom-text-editor {
+    .gutter {
+    min-width: auto !important;
+  }
+}
+```
+
