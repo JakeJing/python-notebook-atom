@@ -48,6 +48,7 @@ atom.commands.add 'atom-workspace','custom:move-up-down', ->
     editor = atom.views.getView(atom.workspace.getActiveTextEditor())
     atom.commands.dispatch(editor, 'editor:move-line-up')
     atom.commands.dispatch(editor, 'editor:move-line-down')
+    # atom.commands.dispatch(editor, 'core:move-left')
 
 # Navigate cell
 atom.commands.add 'atom-text-editor', 'custom:insert-print-move-left', ->
@@ -59,12 +60,12 @@ atom.commands.add 'atom-text-editor', 'custom:run-next-cell', ->
   editor = atom.views.getView(atom.workspace.getActiveTextEditor())
   atom.commands.dispatch(editor, 'cell-navigation:next-cell')
   atom.commands.dispatch(editor, 'hydrogen:run-cell-and-move-down')
-  # atom.commands.dispatch(editor, 'core:move-up')
+  atom.commands.dispatch(editor, 'core:move-up')
 
 atom.commands.add 'atom-text-editor', 'custom:run-current-cell', ->
   editor = atom.views.getView(atom.workspace.getActiveTextEditor())
   atom.commands.dispatch(editor, 'hydrogen:run-cell-and-move-down')
-  # atom.commands.dispatch(editor, 'core:move-up')
+  atom.commands.dispatch(editor, 'core:move-up')
 
 # julia/python
 atom.commands.add 'atom-text-editor','custom:insert-julia-md-chunk-moveup': ->

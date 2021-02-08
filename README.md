@@ -267,9 +267,9 @@ const MODEL_CLASS_FOR_SCOPES = {
 };
 ```
 
-### (17) expand the output
+### (17) show the beginning of hydrogen inline output
 
-When you have a long array or list, you make need to expand the output in **hydrogen** inline output. I found a tempoary solution to solve this issue by creating a keybinding to move the line below up and down. In so doing, Atom will automatically expand the long array and show the beginning of the data. 
+When you have a long array or list, you may want to view the very beginning of **hydrogen** inline output, since it contains more information of data type and size. I found a tempoary solution to solve this issue by creating a keybinding to move the line below up and down. In so doing, Atom will automatically display the very beginning of the data. 
 
 ```coffeescript
 # move line up and down (in order to expand the long output)
@@ -278,7 +278,7 @@ atom.commands.add 'atom-workspace','custom:move-up-down', ->
     atom.commands.dispatch(editor, 'editor:move-line-up')
     atom.commands.dispatch(editor, 'editor:move-line-down')
 ```
-With this pre-defined action, I simply map a key combination (**shift-cmd**) to execute the action.  **Note:** this only works when the current line is not the last line of code, or it is not directly followed by a blank line.
+With this pre-defined action, I simply map a key combination (**shift-cmd**) to execute the action.  **Note:** this only works when the current line is not the last line of code, and it is not directly followed by a blank line.
 
 ```cson
 'atom-workspace':
